@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/src/data/products";
 import Image from "next/image";
+import { formatRupiah } from "@/src/lib/format";
 
 type ProductDetailPageProps = {
     params : Promise<{
@@ -32,7 +33,10 @@ export default async function ProductDetailPage({
                     {product.name}
                 </h1>
                 <p className="mt-5 text-2xl font-bold">
-                    Rp {product.price.toLocaleString("id-ID")}
+                    {formatRupiah(product.price)}
+                </p>
+                <p className="mt-2 text-green-600">
+                    Stok: {product.stock}
                 </p>
                 <p className="mt-5 text-gray-600">
                     {product.description}

@@ -7,7 +7,8 @@ export const products : Product[] =[
         name: "Laptop Gaming",
         price: 15000000,
         image: "/image/products/laptop-gaming.jpg",
-        description: "Laptop gaming ini cocok untuk game berat"
+        description: "Laptop gaming ini cocok untuk game berat",
+        stock: 10
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export const products : Product[] =[
         name: "Mechanical-Keyboard",
         price: 1250000,
         image: "/image/products/mechanical-keyboard.jpg",
-        description: "keyboard mecha dengan rgd menyala"
+        description: "keyboard mecha dengan rgd menyala",
+        stock: 15
     },
     {
         id: 3,
@@ -23,7 +25,8 @@ export const products : Product[] =[
         name: "Wireless Mouse",
         price: 50000,
         image: "/image/products/wireless-mouse.jpg",
-        description:"bisa sejauh mata memandang"
+        description:"bisa sejauh mata memandang",
+        stock: 20
     },
     {
         id: 4,
@@ -31,6 +34,7 @@ export const products : Product[] =[
         name: "Monitor 27 Inch",
         price: 3500000,
         image:"/image/products/monitor-27-inch.jpg",
-        description:"monitor dengan pixel tinggi layar jelas"
+        description:"monitor dengan pixel tinggi layar jelas",
+        stock: 8 
     },
 ]

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { formatRupiah } from "../lib/format";
 
 type ProductCardProps = {
     slug : string;
@@ -22,7 +23,7 @@ export default function ProductCard({
             </h2>
 
             <p className="mt-2 text-gray-500">
-                Rp {price.toLocaleString("id-ID")}
+                {formatRupiah(price)}
             </p>
 
             <Link href={`products/${slug}`} className="mt-5 inline-block rounded bg-black px-4 py-2 text-white">
