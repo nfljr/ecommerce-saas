@@ -12,6 +12,7 @@ export default function Navbar() {
                     <Link rel="stylesheet" href="/">Home</Link>
                     <Link rel="stylesheet" href="/products">Products</Link>
                     <Link rel="stylesheet" href="/about">About</Link>
+                    <Link href="/admin">Admin</Link>
                 </div>
             </div>
         </nav>

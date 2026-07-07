@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { products } from "@/src/data/products";
 import Image from "next/image";
 import { formatRupiah } from "@/src/lib/format";
+import { getProductBySlug } from "@/src/actions/products";
+
 
 type ProductDetailPageProps = {
     params : Promise<{
@@ -15,9 +16,7 @@ export default async function ProductDetailPage({
 }:ProductDetailPageProps){
     const {slug} = await params;
 
-    const product = products.find(
-        (item) => item.slug === slug
-    );
+    const product = await getProductBySlug(slug);
 
     if (!product) {
         notFound();
